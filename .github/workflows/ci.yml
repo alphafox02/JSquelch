@@ -39,7 +39,7 @@ jobs:
       # Setup apt dependencies using the runners shell
       - name: Setup apt dependencies
         run: |
-          sudo apt-get install qt5-default cpputest build-essential qtmultimedia5-dev automake libtool libopus-dev libogg-dev libqt5multimedia5-plugins checkinstall -y
+          sudo apt-get install cpputest build-essential qtmultimedia5-dev automake libtool libopus-dev libogg-dev libqt5multimedia5-plugins checkinstall -y
           
       # build package and install libopusenc-dev
       - name: Build package and install libopusenc-dev
