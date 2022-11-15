@@ -67,13 +67,13 @@ jobs:
           echo finished installing libopusenc-dev.
           
       # Run unit tests
-      - name: Run unit tests
-        run: |
-          cd jsquelch
-          qmake CONFIG+=CI
-          make
-          ./jsquelch -v
-          echo finished testing.
+      #- name: Run unit tests
+      #  run: |
+      #    cd jsquelch
+      #    qmake CONFIG+=CI
+      #    make
+      #    ./jsquelch -v
+      #    echo finished testing.
           
       # Build application
       - name: Build application
