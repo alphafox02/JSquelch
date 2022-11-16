@@ -131,7 +131,8 @@ jobs:
           cp libopusenc/*.deb tmp/jsquelch/
           cd tmp/jsquelch
           echo '#!/bin/bash' > install.sh
-          echo 'sudo apt install ./'$JSQUELCH_PACKAGE_FILENAME' ./'$LIBOPUSENC_PACKAGE_FILENAME' -y' >> install.sh
+          echo 'sudo dpkg -i ./'$JSQUELCH_PACKAGE_FILENAME' ' >> install.sh 
+          echo 'sudo dpkg -i ./'$LIBOPUSENC_PACKAGE_FILENAME' ' >> install.sh
           echo 'sudo ldconfig' >> install.sh
           echo '#!/bin/bash' > uninstall.sh
           echo 'sudo dpkg --remove jsquelch libopusenc-dev' >> uninstall.sh
